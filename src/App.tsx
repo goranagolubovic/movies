@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FormEvent, useEffect, useState } from 'react';
 import './App.css';
+import MovieComponent from './components/MovieComponent';
+import { IMovie } from './IMovie';
 
 function App() {
+ const [movies,setMovies] = useState<IMovie[]>([]);
+const [moviesSearch,setMoviesSearch] = useState('');
+const searchForMovies = async(query:string):Promise<IMovie[]>=>{
+  const result = await fetch(`http://localhost:8080/api/movies/${query}`);
+  return await result.json();
+}
+const search = (event:FormEvent<HTMLFormElement>) =>{
+  event.preventDefault();
+  const form = event.target as HTMLFormElement;
+  const input = form.querySelector('#searchText') as HTMLInputElement;
+  setMoviesSearch(input.value);
+}
+useEffect(()=>{
+  (
+    async() => {
+      const query = encodeURIComponent(moviesSearch);
+      if(query){
+      const response = await searchForMovies(query);
+      setMovies(response);
+      }
+    }
+  )();
+},[moviesSearch])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form className='searchForm' onSubmit={event=>search(event)}>
+        <input id="searchText" type="text"></input>
+        <button>Search</button>
+      </form>
+      <div className='movie-container'>{
+        movies.length!=0 &&  <MovieComponent movie={movies[0]}></MovieComponent>
+      }
+      </div>
     </div>
   );
 }
