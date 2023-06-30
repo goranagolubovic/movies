@@ -1,0 +1,123 @@
+.container {
+  width: 90vw;
+  min-height: 60vh;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: #25364b;
+  /* background-color: #0d203667; */
+  /* background-color: #e9e9e9; */
+  padding: 10px;
+  /* background: linear-gradient(to bottom, #03000f99, #03000f48); */
+  box-shadow: rgba(61, 13, 13, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  border: 1px solid #5d6a79;
+}
+
+.title {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6384;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #5d6a793b;
+  /* background-color: red; */
+}
+
+.charts {
+  width: 100%;
+  min-height: 550px;
+  /* max-height: 500px; */
+  flex-grow: 1;
+
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 10px;
+  /* background-color: green; */
+}
+
+.bar {
+  height: 100%;
+  min-height: 400px;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  /* background-color: yellow; */
+}
+
+.line {
+  height: 100%;
+  min-height: 400px;
+  width: 45%;
+  /* background-color: red; */
+}
+
+.nivoSize {
+  height: 500px;
+}
+
+
+.summary {
+  width: 100%;
+  min-height: 150px;
+  /* background-color: red; */
+  border-top: 1px solid #5d6a793b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.points {
+  width: 100%;
+  padding: 10px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.point {
+  border-right: 1px solid #5d6a793b;
+  min-height: 70px;
+  word-break: break-all;
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background-color: red; */
+}
+
+.point:nth-last-child(1) {
+  border: none;
+}
+@media only screen and (max-width: 600px) {
+  .charts {
+    flex-direction: column;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .line {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+.input {
+  width: 30vw;
+  height: 35px;
+  margin: 20px;
+
+  padding-left: 40px;
+  border-radius: 20px;
+
+  border-style: solid;
+  border-width: 1px;
+  background-color: #3135467f;
+  color: white;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+.username {
+  background: url("../../../../public/assets/user.png") no-repeat 10px;
+  background-size: 20px;
+}
+.password {
+  background: url("../../../../public/assets/lock.png") no-repeat 10px;
+  background-size: 20px;
+}
+
+.search {
+  background: url("../../../../public/assets/search.png") no-repeat 10px;
+  background-size: 20px;
+}

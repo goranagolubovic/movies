@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/movies?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=CET&zeroDateTimeBehavior=round
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        search:
+          default:
+            directory_provider: filesystem
+            indexBase: ./data/lucene

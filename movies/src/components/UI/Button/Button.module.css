@@ -1,0 +1,25 @@
+.button {
+  height: 37px;
+  min-width: 100px;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+.default {
+  border: 1px solid #cc0b30;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 13px;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: bold;
+}
+
+.primary {
+  background-color: #cc0b30;
+}

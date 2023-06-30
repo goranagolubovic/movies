@@ -1,0 +1,70 @@
+.header{
+    width: 100vw;
+    height: 80px;
+
+    padding: 0 50px;
+    /* background-color: #CC0B30; */
+    background: linear-gradient(to bottom, #03000f99, #03000f71);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.active{
+    color: '#CC0B30';
+    font-weight : bold;
+}
+
+.logo{
+    margin-left: 10px;
+}
+
+li {
+    list-style: none;
+    text-transform: uppercase;   
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.login{
+    /* background-color: #CC0B30; */
+    border: 1px solid #CC0B30;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 20px;
+
+    font-family: 'Roboto';
+    font-size: 13px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    letter-spacing: 1.3px;
+
+}
+.navigation {
+    width: 55%;
+    height: 95%;
+    /* background-color: yellow; */
+
+    margin-right: 80px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#private-route{
+    color: #CC0B30;
+}
